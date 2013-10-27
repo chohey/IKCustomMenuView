@@ -79,24 +79,28 @@
 
 - (IBAction)pushCustomBtn:(id)sender {
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"レイアウトの変更" message:nil delegate:self cancelButtonTitle:@"背景画像変更" otherButtonTitles:@"ボタン画像変更",@"ボタン位置変更",@"初期化",@"キャンセル",nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"レイアウトの変更" message:nil delegate:self cancelButtonTitle:@"キャンセル" otherButtonTitles:@"背景画像変更",@"ボタン画像変更",@"ボタン位置変更",@"初期化",nil];
     [alert show];
 }
 -(void)alertView:(UIAlertView *)alert clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0:{
+            // cancelButtonが押されたときのアクション
+            break;
+        }
+        case 1:{
             // 背景画像変更
             self.caseString = [NSMutableString stringWithString:@"backImage"];
             [self imagePickerSetup];
             break;
         }
-        case 1:{
+        case 2:{
             // ボタン画像変更
             self.caseString = [NSMutableString stringWithString:@"buttonImage"];
             [self imagePickerSetup];
             break;
         }
-        case 2:{
+        case 3:{
             // ボタン位置変更
             [self.view bringSubviewToFront:self.coverView];
             self.naviTitleLabel.text = @"ボタン移動モード";
@@ -105,7 +109,7 @@
             [self.shakeTimer fire];
             break;
         }
-        case 3:{
+        case 4:{
             // 初期化
             [self.backImageView setImage:[UIImage imageNamed:@"backImage.png"]];
             [self.btn1 setBackgroundImage:[UIImage imageNamed:@"baseball.png"] forState:UIControlStateNormal];
@@ -119,9 +123,6 @@
             [ud synchronize]; // 一応すぐに反映させる
             break;
         }
-        case 4:
-            // cancelButtonが押されたときのアクション
-            break;
         default:
             break;
     }
