@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IKViewController : UIViewController
+@interface IKViewController : UIViewController <UIPickerViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *backImageView;
 @property (strong, nonatomic) IBOutlet UIButton *btn1;
