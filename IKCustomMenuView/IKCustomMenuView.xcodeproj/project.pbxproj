@@ -261,6 +261,8 @@
 		89FCD91F181CF1BB006F86EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IKCustomMenuView/IKCustomMenuView-Prefix.pch";
 				INFOPLIST_FILE = "IKCustomMenuView/IKCustomMenuView-Info.plist";
@@ -272,6 +274,8 @@
 		89FCD920181CF1BB006F86EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IKCustomMenuView/IKCustomMenuView-Prefix.pch";
 				INFOPLIST_FILE = "IKCustomMenuView/IKCustomMenuView-Info.plist";
