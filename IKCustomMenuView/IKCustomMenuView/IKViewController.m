@@ -162,6 +162,7 @@
             break;
     }
 }
+
 -(void)setMoveButton
 {
     [self.view bringSubviewToFront:self.coverView];
