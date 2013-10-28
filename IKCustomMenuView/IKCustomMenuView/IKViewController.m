@@ -165,12 +165,14 @@
 
 -(void)setMoveButton
 {
-    [self.view bringSubviewToFront:self.coverView];
-    self.naviTitleLabel.text = @"ボタン移動モード";
-    self.shakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.14f target:self selector:@selector(shake) userInfo:nil repeats:YES];
-    self.reverse = 1;
-    [self.shakeTimer fire];
-    self.moveBtn = YES;
+    if (!self.moveBtn) {
+        [self.view bringSubviewToFront:self.coverView];
+        self.naviTitleLabel.text = @"ボタン移動モード";
+        self.shakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.14f target:self selector:@selector(shake) userInfo:nil repeats:YES];
+        self.reverse = 1;
+        [self.shakeTimer fire];
+        self.moveBtn = YES;
+    }
 }
 
 -(void)shake{
